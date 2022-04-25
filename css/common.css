@@ -56,12 +56,17 @@ nav li a {
     text-decoration: none;
     font-size: 1em;
     font-weight: bold;
-    color: var (--color-active);
+    color: aqua;
+}
+
+nav li a:active {
+
+    color: aqua;
 }
 
 nav li.current-page a {
-    color: var (--color-theme);
-    background-color: var (--color-active);
+    color: #00594c;
+    background-color: aqua;
     pointer-events: none;
 }
 
@@ -109,6 +114,7 @@ footer {
     text-align: center;
     padding-top: 10px;
     padding-bottom: 10px;
+    background: #00594c;
 }
 
 footer p {
