@@ -37,6 +37,8 @@ header {
     top: 0;
     width: 100%;
     background: var(--color-theme);
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
 }
 
 nav>ul {
@@ -56,7 +58,7 @@ nav li a {
     text-decoration: none;
     font-size: 1em;
     font-weight: bold;
-    color: aqua;
+    color: #5df2d6;
 }
 
 nav li a:active {
@@ -68,6 +70,8 @@ nav li.current-page a {
     color: #00594c;
     background-color: aqua;
     pointer-events: none;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 main {
@@ -91,8 +95,8 @@ h1>img {
 }
 
 h2 {
-    color: var (--color-theme);
-    margin: 16px 0;
+    color: var(--color-theme);
+    margin: 45px 50px 23px 40px;
     text-align: center;
 }
 
@@ -104,6 +108,66 @@ h3 {
 main section {
     display: flex;
     justify-content: space-around;
+    margin: 40px;
+}
+
+.nombre {
+    width: 315px;
+    margin: 5px 0px 10px 0px;
+    height: 40px;
+    text-indent: 10px;
+    border-radius: 5px;
+}
+
+.email {
+    width: 315px;
+    margin: 5px 0px 10px 0px;
+    height: 40px;
+    text-indent: 10px;
+    border-radius: 5px;
+}
+
+.mensaje {
+    width: 315px;
+    margin: 5px 0px 10px 0px;
+    height: 215px;
+    text-indent: 10px;
+    border-radius: 5px;
+}
+
+.limpiar {
+    margin-left: 77px;
+    width: 75px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: var(--color-theme);
+    color: white;
+    font-weight: bold;
+}
+
+.enviar {
+    width: 75px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: var(--color-theme);
+    color: white;
+    font-weight: bold;
+}
+
+.message {
+    display: grid;
+    justify-content: space-around;
+    margin: 40px;
+}
+
+.msg-error {
+    text-align: center;
+    padding-top: 15px;
+    width: 487px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: #dc3545;
+    color: white;
 }
 
 footer {

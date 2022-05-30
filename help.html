@@ -10,7 +10,7 @@
     
     <!-- Estilos CSS -->
     
-    <link rel="stylesheet" href="css/pages/add-city.css">
+    <link rel="stylesheet" href="css/pages/help.css">
 
 </head>
 
@@ -29,7 +29,7 @@
                 <li><a href="index.html">Clima</a>
                 </li>
 
-                <li><a href="add-city.html">Ciudad</a>
+                <li><a href="add-city.html">Agregar Ciudad</a>
                 </li>
 
                 <li class="current-page"><a href="help.html">Ayuda</a>
@@ -53,19 +53,38 @@
             seleccionar la Ciudad en cuestión desde la página <a href="">Clima</a></p>
         <section id="form-city-list">
 
+            <form action="" method="post">
+
+                <label for="nombre">Nombre:</label>
+                <br>
+                <input name="nombre" id="nombre" type="text" class="nombre" />
+                <br>
+                
+                <label for="email">Email:</label>
+                <br>
+                <input name="email" id="email" type="text" class="email"/>
+                <br>
+                
+                <label for="mensaje">Mensaje:</label>
+                <br>
+                <textarea cols="20" name="mensaje" id="mensaje" rows="5" class="mensaje"></textarea><br />
+
+                <input type="submit" value="Limpiar" class="limpiar" />
+                <input type="submit" value="Enviar" class="enviar"/>
+            </form>
+
         </section>
+
+        <div class="message">
+      
+            <p class="msg-error">Ingrese un Email válido</p>
+            <br>
+      
+          </div>
 
         <section id="section-weather-result">
 
-            <form action="/action.php" method="post">
-
-                <label for="nombre">Nombre:</label> <input name="nombre" id="nombre" type="text" /> <br />
-                <label for="email">Email:</label> <input name="email" id="email" type="text" /> <br />
-                <label for="mensaje">Mensaje:</label> <textarea cols="20" name="mensaje" id="mensaje" rows="5"></textarea><br />
-
-                <input type="submit" value="Limpiar" />
-                <input type="submit" value="Enviar" />
-
+            
         </section>
 
     </main>
