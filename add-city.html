@@ -10,7 +10,10 @@
 
   <!-- Estilos CSS -->
 
+  <link rel="stylesheet" href="css/common.css">
   <link rel="stylesheet" href="css/pages/add-city.css">
+  <script src="js/common.js" defer></script>
+  <script src="js/pages/add-city.js" defer></script>
 
 </head>
 
@@ -51,25 +54,49 @@
 
       <!-- Sección donde se debe colocar el formulario, con el select y el botón de consultar -->
 
-      <form action="">
+      <form action="" id="form">
         <label class="texto-ingrese-ciudad" for="ciudad">Ingrese la ciudad a agregar:</label>
         <br>
         <input class="ciudad" id="ciudad" name="ciudad" type="text" />
         <br>
-        <input type="submit" value="Agregar" class="agregar" />
+        <button type="submit" id="add-city" value="Agregar" class="agregar">Agregar</button>
       </form>
+      <div id="msg" class="add-city">
+        <!-- Muestra del mensaje -->
+      </div>
+
+      <div id="loader" class="loader" style="display:none">
+        <div class="loader-inner">
+          <div class="loader-line-wrap">
+            <div class="loader-line"></div>
+          </div>
+          <div class="loader-line-wrap">
+            <div class="loader-line"></div>
+          </div>
+          <div class="loader-line-wrap">
+            <div class="loader-line"></div>
+          </div>
+          <div class="loader-line-wrap">
+            <div class="loader-line"></div>
+          </div>
+          <div class="loader-line-wrap">
+            <div class="loader-line"></div>
+          </div>
+        </div>
+      </div>
 
     </section>
 
     <div class="messages">
 
-      <p class="msg-success">Ciudad agregada con éxito</p>
-      <br>
-
-      <p class="msg-error">Error: La ciudad ingresada no se encuentra en la API o se produjo un error al consultar</p>
-      <br>
-
-      <p class="msg-warning">La ciudad ingresada ya se encuentra almacenada</p>
+        <p class="msg">Ciudad agregada con éxito</p>
+        <br>
+  
+        <p class="msg msg-error">Error: La ciudad ingresada no se encuentra en la API o se produjo un error al consultar</p>
+        <br>
+  
+        <p class="msg msg-warning">La ciudad ingresada ya se encuentra almacenada</p>
+        <br>
 
     </div>
 

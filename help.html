@@ -7,15 +7,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clima App</title>
-    
+
     <!-- Estilos CSS -->
-    
+
+    <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/pages/help.css">
+    <script src="js/common.js" defer></script>
+    <script src="js/pages/help.js" defer></script>
 
 </head>
 
 <body>
-    
+
     <header>
 
         <h1>
@@ -43,48 +46,75 @@
 
     <!-- Contenido principal de la página -->
     <main>
-
+        
+        
         <h2>Ayuda Clima App v.1.0</h2>
+        
+        <div class="message texto-ayuda">
 
-        <p>Esta App te permite consultar el clima de una ciudad en particular utilizando la API de <a
-            href="https://openweathermap.org/api" target="_blank">OpenWeatherMap</a><p>
 
-        <p> Para poder consultar el clima, primero deberá <a href="">Agregar una ciudad</a> y luego
-            seleccionar la Ciudad en cuestión desde la página <a href="">Clima</a></p>
+            <p>Esta App te permite consultar el clima de una ciudad en particular utilizando la API de <a
+                    href="https://openweathermap.org/api" target="_blank">OpenWeatherMap</a>
+            <p>
+
+            <p> Para poder consultar el clima, primero deberá <a href="">Agregar una ciudad</a> y luego
+                seleccionar la Ciudad en cuestión desde la página <a href="">Clima</a></p>
+
+
+        </div>
+
         <section id="form-city-list">
 
-            <form action="" method="post">
+            <form id="form" action="" method="post">
 
                 <label for="nombre">Nombre:</label>
                 <br>
                 <input name="nombre" id="nombre" type="text" class="nombre" />
                 <br>
-                
+
                 <label for="email">Email:</label>
                 <br>
-                <input name="email" id="email" type="text" class="email"/>
+                <input name="Email" id="email" type="text" class="email" />
                 <br>
-                
+
                 <label for="mensaje">Mensaje:</label>
                 <br>
                 <textarea cols="20" name="mensaje" id="mensaje" rows="5" class="mensaje"></textarea><br />
 
-                <input type="submit" value="Limpiar" class="limpiar" />
-                <input type="submit" value="Enviar" class="enviar"/>
+                <input  id="setClear" type="submit" value="Limpiar" class="limpiar" />
+                <input onclick="sendAndValidate()" id="enviarMail" type="submit" value="Enviar" class="enviar" />
             </form>
 
         </section>
+        <div id="msg" class="add-city">
+            <!-- Muestra del mensaje -->
+        </div>
+        
 
-        <div class="message">
-      
-            <p class="msg-error">Ingrese un Email válido</p>
-            <br>
-      
+        <div id="loader" class="loader" style="display:none">
+            <div class="loader-inner">
+              <div class="loader-line-wrap">
+                <div class="loader-line"></div>
+              </div>
+              <div class="loader-line-wrap">
+                <div class="loader-line"></div>
+              </div>
+              <div class="loader-line-wrap">
+                <div class="loader-line"></div>
+              </div>
+              <div class="loader-line-wrap">
+                <div class="loader-line"></div>
+              </div>
+              <div class="loader-line-wrap">
+                <div class="loader-line"></div>
+              </div>
+            </div>
           </div>
+
 
         <section id="section-weather-result">
 
-            
+
         </section>
 
     </main>
