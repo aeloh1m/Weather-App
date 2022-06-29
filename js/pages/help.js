@@ -4,15 +4,16 @@ function resolverMensaje() {
     debugger;
     return new Promise(resolve => {
       setTimeout(() => {
+        msg.style.display = "flex"
 
         if (validarMail() == true){
-            msg.innerHTML += '<p class="msg">Su mensaje ha sido enviado con éxito</p>';
+            msg.innerHTML = '<p class="msg">Su mensaje ha sido enviado con éxito</p>';
             deleteMsg()
             return;
     
         }
         else {
-            msg.innerHTML += '<p class="msg msg-error">Por favor, ingrese un correo válido</p>';
+            msg.innerHTML = '<p class="msg msg-error">Por favor, ingrese un correo válido</p>';
             deleteMsg()
             return;
         }

@@ -2,7 +2,7 @@
 
 function createCard() {
     
-    loader.style.display = 'none';
+    loader.style.display = 'unset';
     exitLoader();
     
     consultAPI(selector.value);

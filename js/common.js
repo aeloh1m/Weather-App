@@ -65,7 +65,7 @@ function showWeather(data) {
 
 function deleteMsg() {
     setTimeout(function() {
-        msg.remove();
+        msg.style.display = "none" // Hace desaparecer los mensajes
     }, 10000);
 }
 
