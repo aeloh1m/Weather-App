@@ -1,11 +1,18 @@
-const loader = document.getElementById('loader')
-let selector = document.getElementById("city-list");
-let cities = getCitiesFromLocalStorage();
+
+
+function createCard() {
+    
+    loader.style.display = 'none';
+    exitLoader();
+    
+    consultAPI(selector.value);
+    document.querySelector('.card').style.display = 'none';
+}
 
 function addCitiesToSelector() {
 
     if (cities.length == 0) {
-        selector.innerHTML += `<option value="" disabled selected>No hay ciudades agregadas</option>`
+        selector.innerHTML += `<option value="sinCiudad" disabled selected>No hay ciudades agregadas</option>`
     }
     else {
         selector.innerHTML += `<option value="" disabled selected>Seleccionar Ciudad</option>`
@@ -15,15 +22,6 @@ function addCitiesToSelector() {
     }
 }
 
-function createCard() {
-
-    loader.style.display = 'unset';
-    removeSpinner();
-    
-    consultAPI(selector.value);
-    document.querySelector('.card').style.display = 'none';
-}
-
-document.getElementById("consultar").addEventListener("click", createCard)
+document.getElementById("consultarClima").addEventListener("click", createCard)
 
 addCitiesToSelector();

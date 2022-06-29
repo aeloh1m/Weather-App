@@ -1,13 +1,13 @@
 // inicializamos constantes y variables que vayamos a utilizar a lo largo del código.
 
-const msg = document.getElementById('msg');
-const loader = document.getElementById('loader')
+var msg = document.getElementById('msg');
+const loader = document.querySelector('.loader')
 const enviar = document.getElementById('enviarMail');
 const email = document.getElementById('email');
 
 let selector = document.getElementById("city-list");
-let cities = getCitiesFromLocalStorage();
-let newCity = document.getElementById("agregarciudad");
+var cities = getCitiesFromLocalStorage();
+let City = document.getElementById("ciudad");
 
 
 function getCitiesFromLocalStorage() {
@@ -65,8 +65,8 @@ function showWeather(data) {
 
 function deleteMsg() {
     setTimeout(function() {
-        document.getElementsByClassName("msg")[0].remove();
-    }, 10000);
+        msg.remove();
+    }, 5000);
 }
 
 function exitLoader() {

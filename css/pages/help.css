@@ -41,6 +41,7 @@
     background-color: var(--color-theme);
     color: white;
     font-weight: bold;
+    text-align: center;
 }
 
 .message {

@@ -56,16 +56,33 @@
 
             <!-- Sección donde se debe colocar el formulario, con el select y el botón de consultar -->
 
-            <form action="" method="post"> <select class="ciudad" name="ciudad">
+            <form action=""> <select class="ciudad" id="city-list" name="ciudad">
 
-                <option value="" disabled selected>Consultar Ciudad</option>
-                    <option value="rosario">Rosario</option>
-                    <option value="rafaela">Rafaela</option>
-                </select> <button type="button" id="consultar" class="consultar" >Consultar</button>
+                </select> 
+                <button type="button" id="consultarClima" class="consultar" >Consultar</button>
 
             </form>
 
         </section>
+        <div id="loader" class="loader" style="display:none">
+            <div class="loader-inner">
+              <div class="loader-line-wrap">
+                <div class="loader-line"></div>
+              </div>
+              <div class="loader-line-wrap">
+                <div class="loader-line"></div>
+              </div>
+              <div class="loader-line-wrap">
+                <div class="loader-line"></div>
+              </div>
+              <div class="loader-line-wrap">
+                <div class="loader-line"></div>
+              </div>
+              <div class="loader-line-wrap">
+                <div class="loader-line"></div>
+              </div>
+            </div>
+          </div>
 
         <section id="section-weather-result">
 

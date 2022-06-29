@@ -82,26 +82,23 @@
                 <textarea cols="20" name="mensaje" id="mensaje" rows="5" class="mensaje"></textarea><br />
 
                 <input  id="setClear" type="submit" value="Limpiar" class="limpiar" />
-                <input onclick="sendAndValidate()" id="enviarMail" type="submit" value="Enviar" class="enviar" />
+                <input onclick="sendAndValidate()" id="enviarMail" value="Enviar" class="enviar" />
             </form>
 
         </section>
-        <div id="msg" class="add-city">
-            <!-- Muestra del mensaje -->
-        </div>
         
-
+        
         <div id="loader" class="loader" style="display:none">
-            <div class="loader-inner">
-              <div class="loader-line-wrap">
-                <div class="loader-line"></div>
-              </div>
-              <div class="loader-line-wrap">
-                <div class="loader-line"></div>
-              </div>
-              <div class="loader-line-wrap">
-                <div class="loader-line"></div>
-              </div>
+          <div class="loader-inner">
+            <div class="loader-line-wrap">
+              <div class="loader-line"></div>
+            </div>
+            <div class="loader-line-wrap">
+              <div class="loader-line"></div>
+            </div>
+            <div class="loader-line-wrap">
+              <div class="loader-line"></div>
+            </div>
               <div class="loader-line-wrap">
                 <div class="loader-line"></div>
               </div>
@@ -110,8 +107,11 @@
               </div>
             </div>
           </div>
-
-
+          
+          <div id="msg" class="add-city">
+              <!-- Muestra del mensaje -->
+          </div>
+          
         <section id="section-weather-result">
 
 

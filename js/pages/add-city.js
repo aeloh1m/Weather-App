@@ -1,10 +1,19 @@
+
+// Mensajes
+var success = '<p class="msg">Ciudad agregada con éxito</p>';
+var warning = '<p class="msg msg-error">La ciudad ingresada ya se encuentra almacenada</p>';
+var error = '<p class="msg msg-warning">Error: La ciudad ingresada no se encuenta en la API o se produjo un error al consultar</p>';
+
+setTimeout(function(){
+    console.log("Awaitea"); 
+}, 5000);
+
 // Validación
 
-async function validarCiudad(newCity) {
-    let cities = getCitiesFromLocalStorage();
+async function validarCiudad(City) {
   
     for (let i = 0; i < cities.length; i++) {
-        if (newCity == cities[i]) {
+        if (City == cities[i]) {
             return "warning";
         };
     };
@@ -17,13 +26,12 @@ async function validarCiudad(newCity) {
     };
 }
 
+
 async function addCityToLocalStorage() {
-
+    debugger;
+    
+    newCity = City.value
     newCity = newCity.toUpperCase()
-
-    var success = '<p class="msg">Ciudad agregada con éxito</p>';
-    var warning = '<p class="msg msg-error">La ciudad ingresada ya se encuentra almacenada</p>';
-    var error = '<p class="msg msg-warning">Error: La ciudad ingresada no se encuenta en la API o se produjo un error al consultar</p>';
 
     switch(await validarCiudad(newCity)) {
         case "success":
@@ -37,20 +45,18 @@ async function addCityToLocalStorage() {
         case "warning":
             loader.style.display = 'unset';
             exitLoader();
-            msg.innerHTML += warning;
+            msg.innerHTML = warning;
             deleteMsg();
             break;
         case "error":
             loader.style.display = 'unset';
             exitLoader();
-            msg.innerHTML += error;
+            msg.innerHTML = error;
             deleteMsg();
             break;
     };
+
 };
-
-
-
 
 
 document.getElementById("add-city").addEventListener("click", addCityToLocalStorage);
