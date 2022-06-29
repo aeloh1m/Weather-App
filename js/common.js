@@ -66,7 +66,7 @@ function showWeather(data) {
 function deleteMsg() {
     setTimeout(function() {
         msg.remove();
-    }, 5000);
+    }, 10000);
 }
 
 function exitLoader() {
